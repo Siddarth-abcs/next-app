@@ -1,0 +1,53 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Guitar Fundamentals",
+      "description": "Learn the basics of playing guitar with our comprehensive beginner's course.",
+      "call_to_action": "Learn More",
+      "isFeatured": true
+    },
+    {
+      "id": 2,
+      "title": "Advanced Vocal Techniques",
+      "description": "Enhance your singing with advanced vocal techniques for intermediate to advanced learners.",
+      "call_to_action": "Learn More",
+      "isFeatured": true
+    },
+    {
+      "id": 3,
+      "title": "Music Production Fundamentals",
+      "description": "Dive into music production with this introductory course on the basics of sound engineering and mixing.",
+      "call_to_action": "Learn More",
+      "isFeatured": true
+    },
+    {
+      "id": 4,
+      "title": "Piano for Beginners",
+      "description": "Start your piano journey with this course designed for absolute beginners.",
+      "call_to_action": "Learn More",
+      "isFeatured": false
+    },
+    {
+      "id": 5,
+      "title": "DJ Mixing Techniques",
+      "description": "Master the art of DJing with this course on mixing and beatmatching.",
+      "call_to_action": "Learn More",
+      "isFeatured": true
+    },
+    {
+      "id": 6,
+      "title": "Songwriting Essentials",
+      "description": "Learn the fundamentals of writing catchy and meaningful songs.",
+      "call_to_action": "Learn More",
+      "isFeatured": false
+    },
+    {
+      "id": 7,
+      "title": "Electronic Music Production",
+      "description": "Explore the world of electronic music production with this comprehensive course.",
+      "call_to_action": "Learn More",
+      "isFeatured": true
+    }
+  ]
+}
