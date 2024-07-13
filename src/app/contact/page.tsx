@@ -1,7 +1,27 @@
+import React, { useState } from "react";
 import { BackgroundBeams } from "@/components/background-beams";
-import React from "react";
 
-const page = () => {
+const Page = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here, e.g., send the data to a server
+    console.log("Form submitted:", formData);
+  };
+
   return (
     <div className="mt-36">
       <section className="body-font relative text-gray-400">
@@ -18,13 +38,15 @@ const page = () => {
           </div>
 
           <div className="mx-auto md:w-2/3 lg:w-1/2">
-            <div className="-m-2 flex flex-wrap">
+            <form onSubmit={handleSubmit} className="-m-2 flex flex-wrap">
               <div className="w-1/2 p-2">
                 <div className="relative">
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
                     placeholder="Name"
                   />
@@ -42,6 +64,8 @@ const page = () => {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
                     placeholder="Email"
                   />
@@ -58,6 +82,8 @@ const page = () => {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="peer h-32 w-full resize-none rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900"
                     placeholder="Message"
                   ></textarea>
@@ -70,14 +96,14 @@ const page = () => {
                 </div>
               </div>
               <div className="w-full p-2 flex justify-center">
-                <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <button type="submit" className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                   <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                     Border Magic
                   </span>
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -86,4 +112,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
