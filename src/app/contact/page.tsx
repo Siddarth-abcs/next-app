@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="mt-36">
+    <div className="mt-36 sm:bg-black">
       <section className="body-font relative text-gray-400">
         <div className="container mx-auto px-5 py-24">
           <div className="mb-12 flex w-full flex-col text-center">
@@ -84,9 +84,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <div className="sm:hidden">
         <BackgroundBeams />
-      </div>
     </div>
   );
 };
