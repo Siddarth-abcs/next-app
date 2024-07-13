@@ -19,7 +19,6 @@ bg-grid-white/[0.02]"
       <TestimonialCard />
       <UpComingWebinar />
       <Instructors />
-      <Footer />
     </main>
   );
 }
